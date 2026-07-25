@@ -415,6 +415,7 @@ a{ color:inherit; text-decoration:none; }
   text-align:center;
   transition:background .3s ease;
 }
+.platform__icon{ width:26px; height:26px; color:var(--gold); margin:0 auto 16px; display:block; }
 .platform:last-child{ border-right:0; }
 .platform__name{ font-family:var(--cond); font-weight:700; text-transform:uppercase; font-size:clamp(1.25rem,1.8vw,1.6rem); letter-spacing:.02em; color:var(--cream); transition:color .3s ease; }
 .platform__meta{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:#7e88a6; margin-top:10px; }
@@ -442,6 +443,7 @@ a{ color:inherit; text-decoration:none; }
 }
 .clinks .clink:last-child{ border-bottom:1px solid var(--navy); }
 .clink:hover{ padding-left:12px; }
+.clink__icon{ width:20px; height:20px; color:var(--navy); flex-shrink:0; }
 .clink__cat{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--navy); opacity:.7; min-width:90px; }
 .clink__val{ font-family:var(--cond); font-weight:700; text-transform:uppercase; font-size:clamp(1.3rem,2vw,1.7rem); letter-spacing:.02em; }
 
