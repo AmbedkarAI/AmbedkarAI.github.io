@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css?v=3" />
+<link rel="stylesheet" href="css/styles.css?v=5" />
 </head>
 <body>
 
@@ -274,22 +274,27 @@
     <div class="platforms__label reveal">Where You Can Find Us</div>
     <div class="pgrid reveal d1">
       <a class="platform" href="https://whatsapp.com/channel/0029Vb79qgsCcW4zsxXT3Y0U" target="_blank" rel="noopener">
+        <svg class="platform__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="11" r="9"/><polygon points="7,18 7,23 11,19" fill="currentColor" stroke="none"/></svg>
         <div class="platform__name">WhatsApp</div>
         <div class="platform__meta">Broadcast + Q&amp;A</div>
       </a>
       <a class="platform" href="https://www.youtube.com/channel/UCbmg4pZBpk14Fty0g4yT4Kg" target="_blank" rel="noopener">
+        <svg class="platform__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><polygon points="10,9.5 10,14.5 15,12" fill="currentColor" stroke="none"/></svg>
         <div class="platform__name">YouTube</div>
         <div class="platform__meta">Lectures &amp; Workshops</div>
       </a>
-      <a class="platform" href="#" rel="noopener">
-        <div class="platform__name">GitLab</div>
+      <a class="platform" href="https://github.com/AmbedkarAI" target="_blank" rel="noopener">
+        <svg class="platform__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><polyline points="9,15 9,10 15,10 15,15"/></svg>
+        <div class="platform__name">GitHub</div>
         <div class="platform__meta">Code &amp; Projects</div>
       </a>
       <a class="platform" href="https://www.instagram.com/ambedkaraii/" target="_blank" rel="noopener">
+        <svg class="platform__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
         <div class="platform__name">Instagram</div>
         <div class="platform__meta">Outreach &amp; Stories</div>
       </a>
       <a class="platform" href="https://x.com/ai_ambedkar" target="_blank" rel="noopener">
+        <svg class="platform__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
         <div class="platform__name">X / Twitter</div>
         <div class="platform__meta">Thought Leadership</div>
       </a>
@@ -309,21 +314,28 @@
       <p class="contact__body reveal d1">Whether you are a learner, a mentor, a researcher, or an ally — there is a place for you here. The work of democratizing AI belongs to all of us.</p>
       <div class="clinks reveal d2">
         <a class="clink" href="https://whatsapp.com/channel/0029Vb79qgsCcW4zsxXT3Y0U" target="_blank" rel="noopener">
+          <svg class="clink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="11" r="9"/><polygon points="7,18 7,23 11,19" fill="currentColor" stroke="none"/></svg>
           <span class="clink__cat">WhatsApp</span><span class="clink__val">Join the Channel</span>
         </a>
         <a class="clink" href="mailto:ambedkaraiinitiative@gmail.com">
+          <svg class="clink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,6 12,13 21,6"/></svg>
           <span class="clink__cat">Email</span><span class="clink__val">ambedkaraiinitiative@gmail.com</span>
         </a>
-        <a class="clink" href="#" rel="noopener">
-          <span class="clink__cat">GitLab</span><span class="clink__val">Build With Us</span>
+        <a class="clink" href="https://github.com/AmbedkarAI" target="_blank" rel="noopener">
+          <svg class="clink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><polyline points="9,15 9,10 15,10 15,15"/></svg>
+          <span class="clink__cat">GitHub</span><span class="clink__val">Build With Us</span>
         </a>
         <a class="clink" href="https://www.youtube.com/channel/UCbmg4pZBpk14Fty0g4yT4Kg" target="_blank" rel="noopener">
+          <svg class="clink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><polygon points="10,9.5 10,14.5 15,12" fill="currentColor" stroke="none"/></svg>
           <span class="clink__cat">YouTube</span><span class="clink__val">Watch &amp; Learn</span>
         </a>
       </div>
     </div>
 
-    <form class="cform reveal d1" id="joinForm">
+    <form class="cform reveal d1" id="joinForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="935f1e41-080c-4f21-9c99-ab00c774524b" />
+      <input type="hidden" name="subject" value="New message — Ambedkar AI Initiative site" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <div class="field">
         <label for="f-name">Name</label>
         <input id="f-name" name="name" type="text" placeholder="Your name" required />
@@ -346,7 +358,7 @@
       </div>
       <div class="field">
         <label for="f-msg">Message</label>
-        <textarea id="f-msg" name="message" placeholder="Tell us how you'd like to be part of the movement…"></textarea>
+        <textarea id="f-msg" name="message" placeholder="Tell us how you'd like to be part of the movement…" required></textarea>
       </div>
       <button class="btn-submit" type="submit">Send Message →</button>
       <div class="form-note" id="formNote">☸ Namo Buddhaya — we read every message.</div>
