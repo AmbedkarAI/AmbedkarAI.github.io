@@ -53,20 +53,39 @@
     m.appendChild(clone);
   });
 
-  /* ---- Contact form (front-end only) ---- */
+  /* ---- Contact form: submits to Web3Forms ---- */
   var form = document.getElementById('joinForm');
   if (form){
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
       var btn = form.querySelector('.btn-submit');
       var note = document.getElementById('formNote');
-      var name = (form.querySelector('[name="name"]') || {}).value || 'friend';
-      btn.textContent = 'Jai Bhim ☸';
-      if (note){
-        note.textContent = 'Received, ' + name.trim().split(' ')[0] + '. The movement will be in touch.';
-      }
-      form.querySelectorAll('input, textarea, select').forEach(function(f){ f.disabled = true; });
+      var nameField = form.querySelector('[name="name"]');
+      var firstName = (nameField && nameField.value ? nameField.value : 'friend').trim().split(' ')[0];
+      var originalBtnText = btn.textContent;
       btn.disabled = true;
+      btn.textContent = 'Sending…';
+      if (note) note.textContent = 'Sending your message…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){ return res.json(); }).then(function(data){
+        if (data.success){
+          btn.textContent = 'Jai Bhim ☸';
+          if (note) note.textContent = 'Received, ' + firstName + '. The movement will be in touch.';
+          form.querySelectorAll('input, textarea, select').forEach(function(f){ f.disabled = true; });
+        } else {
+          btn.disabled = false;
+          btn.textContent = originalBtnText;
+          if (note) note.textContent = 'Something went wrong — please try again or email us directly.';
+        }
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = originalBtnText;
+        if (note) note.textContent = 'Something went wrong — please try again or email us directly.';
+      });
     });
   }
 
